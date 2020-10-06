@@ -68,7 +68,7 @@ class Message(RawMessage):
         input_ = self.text.html if hasattr(self.text, 'html') else self.text
         if ' ' in input_ or '\n' in input_:
             return str(input_.split(maxsplit=1)[1].strip())
-        return ''
+        return 'None'
 
     @property
     def input_str(self) -> str:
@@ -76,7 +76,7 @@ class Message(RawMessage):
         input_ = self.text
         if ' ' in input_ or '\n' in input_:
             return str(input_.split(maxsplit=1)[1].strip())
-        return ''
+        return 'None'
 
     @property
     def input_or_reply_raw(self) -> str:
